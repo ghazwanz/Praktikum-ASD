@@ -10,14 +10,14 @@ public class PlatNomor {
         char input = sc.nextLine().charAt(0);
 
         for (int i = 0; i < kodePlat.length; i++) {
-            if(input == kodePlat[i])hasil = (byte) i;
+            if(input == kodePlat[i] )hasil = (byte) i;
         }
-        System.out.println(hasil);
-        if (hasil != -1) System.out.println("Kode Tidak Ditemukan");
+        if (hasil == -1) System.out.println("Kode Tidak Ditemukan");
         else {
             for (int i = 0; i < kota.length; i++) {
                 if (i == hasil) {
-                    for (int j = 0; j < kota.length; j++) {
+                    System.out.printf("Kota dengan Kode Plat %s: KOTA",input);
+                    for (int j = 0; j < kota[i].length; j++) {
                         System.out.print(kota[i][j]);    
                     }
                 }
