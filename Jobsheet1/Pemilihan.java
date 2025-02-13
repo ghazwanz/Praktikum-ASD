@@ -33,7 +33,7 @@ public class Pemilihan {
             String nilaiHuruf;
             if (rataRata <= 100 && rataRata > 80) nilaiHuruf = "A";
             else if (rataRata <= 80 && rataRata > 73) nilaiHuruf = "B+";
-            else if (rataRata <= 73 && rataRata > 65) nilaiHuruf = "B+";
+            else if (rataRata <= 73 && rataRata > 65) nilaiHuruf = "B";
             else if (rataRata <= 65 && rataRata > 60) nilaiHuruf = "C+";
             else if (rataRata <= 60 && rataRata > 50) nilaiHuruf = "C";
             else if (rataRata <= 50 && rataRata > 39) nilaiHuruf = "D";
