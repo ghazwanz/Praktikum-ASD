@@ -16,7 +16,7 @@ public class PlatNomor {
         else {
             for (int i = 0; i < kota.length; i++) {
                 if (i == hasil) {
-                    System.out.printf("Kota dengan Kode Plat %s: KOTA",input);
+                    System.out.printf("Kota dengan Kode Plat %s: KOTA ",input);
                     for (int j = 0; j < kota[i].length; j++) {
                         System.out.print(kota[i][j]);    
                     }
