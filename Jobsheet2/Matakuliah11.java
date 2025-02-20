@@ -39,6 +39,10 @@ public class Matakuliah11 {
     }
 
     void kurangiJam(int jam){
+        if (jam > jumlahJam) {
+            System.out.println("Input Pengurangan Jam Melebihi Atau Sama Dengan Jumlah Jam!");
+            return;
+        }
         if (jam < 0) {
             System.out.println("Input Pengurangan Jam Tidak Valid!");
             return;
