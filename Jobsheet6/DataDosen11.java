@@ -1,4 +1,4 @@
-package Jobsheet5;
+package Jobsheet6;
 
 public class DataDosen11 {
     Dosen11 [] dataDosen = new Dosen11[10];

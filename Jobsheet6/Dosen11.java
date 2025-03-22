@@ -1,4 +1,4 @@
-package Jobsheet5;
+package Jobsheet6;
 
 public class Dosen11 {
     String kode, nama;
