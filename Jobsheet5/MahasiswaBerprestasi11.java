@@ -48,7 +48,7 @@ public class MahasiswaBerprestasi11 {
         for (int i = 1; i < listMhs.length; i++) {
             Mahasiswa11 temp = listMhs[i];
             int j = i;
-            while (j>0 && listMhs[j-1].ipk>temp.ipk) {
+            while (j>0 && temp.ipk>listMhs[j-1].ipk) {
                 listMhs[j] = listMhs[j-1];
                 j--;
             }
