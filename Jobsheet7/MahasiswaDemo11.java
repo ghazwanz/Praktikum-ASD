@@ -23,7 +23,7 @@ public class MahasiswaDemo11 {
             list.tambah(mhs);
         }
 
-        System.out.println("Data mahasiswa sebelum sorting: ");
+        System.out.println("Data mahasiswa: ");
         list.tampil();
 
         // Melakukan Pencarian Data Sequential
