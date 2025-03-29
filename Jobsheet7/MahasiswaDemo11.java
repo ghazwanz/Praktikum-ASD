@@ -4,9 +4,12 @@ import java.util.Scanner;
 
 public class MahasiswaDemo11 {
     public static void main(String[] args) {
-        MahasiswaBerprestasi11 list = new MahasiswaBerprestasi11();
         Scanner sc = new Scanner(System.in);
-        int jumlahMhs = 5;
+        System.out.print("Masukkan jumlah mahasiswa: ");
+        int jumlahMhs = sc.nextInt();
+        sc.nextLine();
+        MahasiswaBerprestasi11 list = new MahasiswaBerprestasi11(jumlahMhs);
+
         for (int i = 0; i < jumlahMhs; i++) {
             System.out.println("Masukkan Data Mahasiswa ke-" + (i + 1));
             System.out.print("NIM   : ");
@@ -22,11 +25,11 @@ public class MahasiswaDemo11 {
             Mahasiswa11 mhs = new Mahasiswa11(nim, nama, kelas, ipk);
             list.tambah(mhs);
         }
-
+        list.insertionSort();
         System.out.println("Data mahasiswa: ");
         list.tampil();
 
-        // Melakukan Pencarian Data Sequential
+        // Melakukan Pencarian Data Binary
         System.out.println("------------------------------------");
         System.out.println("Pencarian Data");
         System.out.println("------------------------------------");
@@ -34,10 +37,18 @@ public class MahasiswaDemo11 {
         System.out.print("IPK : ");
         double cari = sc.nextDouble();
 
-        System.out.println("Menggunakan sequential searching");
-        double posisi = list.sequentialSearch(cari);
-        int pss = (int) posisi;
-        list.tampilPosisi(cari, pss);
-        list.tampilDataSearch(cari, pss);
+        System.out.println("------------------------------------");
+        System.out.println("Menggunakan Binary Search");
+        System.out.println("------------------------------------");
+        double posisi2 = list.findBinarySearch(cari, 0, jumlahMhs-1);
+        int pss2 = (int) posisi2;
+        list.tampilPosisi(cari, pss2);
+        list.tampilDataSearch(cari, pss2);
+
+        // System.out.println("Menggunakan sequential searching");
+        // double posisi = list.sequentialSearch(cari);
+        // int pss = (int) posisi;
+        // list.tampilPosisi(cari, pss);
+        // list.tampilDataSearch(cari, pss);
     }
 }

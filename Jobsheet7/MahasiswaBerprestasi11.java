@@ -1,7 +1,13 @@
 package Jobsheet7;
 
 public class MahasiswaBerprestasi11 {
-    Mahasiswa11[] listMhs = new Mahasiswa11[5];
+    int jumlahMhs = 5;
+    Mahasiswa11[] listMhs = new Mahasiswa11[jumlahMhs];
+    MahasiswaBerprestasi11(){}
+    MahasiswaBerprestasi11(int jumlahMhs){
+        this.jumlahMhs = jumlahMhs;
+        listMhs = new Mahasiswa11[jumlahMhs];
+    }
     int idx;
 
     void tambah(Mahasiswa11 mhs){
@@ -82,5 +88,19 @@ public class MahasiswaBerprestasi11 {
         }else {
             System.out.println("Data mahasiswa dengan IPK " + x + " tidak ditemukan");
         }
+    }
+    int findBinarySearch(double cari, int left, int right){
+        int mid;
+        if (right >= left) {
+            mid = (left + right) / 2;
+            if (cari == listMhs[mid].ipk) {
+                return (mid);
+            }else if (cari > listMhs[mid].ipk) {
+                return findBinarySearch(cari, left, mid - 1);
+            }else {
+                return findBinarySearch(cari, mid + 1, right);
+            }
+        }
+        return -1;
     }
 }
