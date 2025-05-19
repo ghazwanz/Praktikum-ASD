@@ -24,13 +24,17 @@ public class QueueMain11 {
             pilih = sc.nextInt();
             switch (pilih) {
                 case 1:
+                    boolean fullStatus = Q.isFull();
                     System.out.print("Masukkan data baru: ");
                     int dataMasuk = sc.nextInt();
                     Q.enqueue(dataMasuk);
+                    if(fullStatus) return;
                     break;
                 case 2:
+                    boolean emptyStatus = !Q.isEmpty();
                     int dataKeluar = Q.dequeue();
-                    if (dataKeluar!=0) System.out.println("Data yang dikeluarkan: " + dataKeluar);
+                    if (emptyStatus) System.out.println("Data yang dikeluarkan: " + dataKeluar);
+                    else return;
                     break;
                 case 3:
                     Q.print();
