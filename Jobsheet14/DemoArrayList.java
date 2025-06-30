@@ -36,6 +36,10 @@ public class DemoArrayList {
             // System.out.println(cust.toString());
             System.out.println(cust);
         });
-
+        
+        // Praktikum Sorting
+        System.out.println();
+        customers.sort((c1,c2)->c1.name.compareTo(c2.name));
+        System.out.println(customers);
     }
 }
